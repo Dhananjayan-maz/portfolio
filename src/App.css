@@ -171,8 +171,8 @@ a {
   bottom: 30px;
   right: 30px;
 
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 
   border: none;
   border-radius: 50%;
@@ -510,20 +510,20 @@ a {
 }
 
 .project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
 .project-card {
-  width: 350px;
-  padding: 20px;
-  border-radius: 10px;
+  width: 100%;
+  min-height: 450px;
 
   display: flex;
   flex-direction: column;
 
+  padding: 20px;
+  border-radius: 10px;
   background: white;
 }
 
@@ -779,19 +779,24 @@ a {
 
 
   /* Projects */
-  .project-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
 
-  .project-card {
-    width: 110%;
-  }
+    .projects{
+        padding: 80px 20px;
+    }
+
+    .project-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card{
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
 
   /* Education */
+
   .education-container {
     flex-direction: column;
     align-items: center;
@@ -800,8 +805,6 @@ a {
   .education-card {
     width: 90%;
   }
-
-  /* Skills */
 
   /* Skills section */
   .skills {
@@ -836,19 +839,5 @@ a {
   .contact-container {
     flex-direction: column;
     align-items: center;
-  }
-
-
-  @media (max-width:768px) {
-
-    .timeline::before {
-      left: 20px;
-    }
-
-    .timeline-item {
-      width: 80%;
-      left: 40px !important;
-    }
-
   }
 }
