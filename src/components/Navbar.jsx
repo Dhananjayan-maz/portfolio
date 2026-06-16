@@ -11,12 +11,13 @@ function Navbar() {
         <h2 className="logo">Dhananjayan M</h2>
 
         <div
-          className="menu-btn"
+          className={`menu-btn ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? "✕" : "☰"}
         </div>
       </div>
+      {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
 
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li><a href="#about">About</a></li>

@@ -205,7 +205,7 @@ a {
   background: #2563EB;
 }
 
-.dark-mode .nav-links a,
+
 .dark-mode .logo,
 .dark-mode .menu-btn {
   color: white;
@@ -703,7 +703,7 @@ a {
 
 .footer {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   background: white;
   color: #2563EB;
 }
@@ -712,16 +712,13 @@ a {
 @media(max-width:768px) {
 
   .navbar {
-    height: auto;
-    padding: 15px 25px;
-
-    flex-direction: column;
-    align-items: stretch;
+    height: 75px;
+    padding: 0 20px;
+    
   }
 
   .nav-top {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -729,114 +726,172 @@ a {
 
   .menu-btn {
     display: block;
-
     font-size: 32px;
     color: #2563EB;
     cursor: pointer;
+    z-index: 1100;
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
 
+    top: 0;
+    left: -280px;
+
+    width: 250px;
+    height: 400px;
+    margin-top: 15px;
+
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
 
-    width: 100%;
+    gap: 35px;
 
-    margin-top: 20px;
+    list-style: none;
 
-    text-align: center;
+    transition: .4s ease;
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, .15);
+
+    z-index: 1050;
   }
 
   .nav-links.active {
-    display: flex;
+    left: 0;
   }
 
-
-  /* Hero */
-  .hero {
-    padding: 80px 20px;
+  .nav-links li {
+    font-size: 18px;
+    font-weight: 500;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, .4);
+
+  z-index: 1040;
+
+  animation: fadeOverlay .3s ease;
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: 0;
   }
 
-  .hero h2 {
-    font-size: 1.3rem;
+  to {
+    opacity: 1;
   }
+}
 
-  .profile-img {
-    width: 150px;
-    height: 150px;
-  }
+/* Hero */
+.hero {
+  padding: 80px 20px 40px;
+}
 
-  /* About */
-  .about {
-    padding: 80px 20px;
-  }
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Projects */
+.projects {
+  padding: 50px 20px;
+}
+
+.project-container {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* About */
+.about {
+  padding: 40px 20px 30px;
+}
+
+/* Education */
+.education {
+  padding: 30px 20px 50px;
+}
+
+.education-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.education-card {
+  width: 100%;
+  max-width: 350px;
+}
 
 
-  /* Projects */
+/* Skills */
+.skills {
+  padding: 50px 20px;
+}
 
-    .projects{
-        padding: 80px 20px;
-    }
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .project-container{
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.skill-box {
+  width: 100%;
+  max-width: 320px;
+}
 
-    .project-card{
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-    }
 
-  /* Education */
+/* Certificates */
 
-  .education-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.certifications {
+  padding: 50px 20px 40px;
+}
 
-  .education-card {
-    width: 90%;
-  }
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  /* Skills section */
-  .skills {
-    padding: 80px 20px;
-  }
+.certificate-card {
+  width: 90%;
+}
 
-  .skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
+/* Contact */
 
-  .skill-box {
-    width: 100%;
-    max-width: 300px;
-  }
+.contact {
+  padding: 50px 20px 50px;
+}
 
-  /* Certificates */
-  .certificate-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .certificate-card {
-    width: 90%;
-  }
-
-  /* Contact */
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.contact-container {
+  flex-direction: column;
+  align-items: center;
 }
