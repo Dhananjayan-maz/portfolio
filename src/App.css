@@ -341,7 +341,6 @@ a {
 /* Education section */
 
 .education {
-  margin-top: 0px;
   padding: 50px 10%;
   text-align: center;
 }
@@ -352,11 +351,15 @@ a {
   color: #2563EB;
 }
 
+/* Put cards side by side */
 .education-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: stretch;
   gap: 30px;
+
+  /* Prevent cards from going to next line */
+  flex-wrap: nowrap;
 }
 
 .education-card {
@@ -364,8 +367,8 @@ a {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,.1);
+  transition: .3s;
 }
 
 .education-card:hover {
@@ -583,6 +586,7 @@ a {
   margin-bottom: 10px;
 }
 
+
 /* Certificates section */
 
 .certifications h1 {
@@ -657,8 +661,6 @@ a {
   color: #2563EB;
 }
 
-
-
 .contact-container {
   display: flex;
   margin-top: 40px;
@@ -699,7 +701,6 @@ a {
   color: #2563EB;
 }
 
-/* About section */
 
 .footer {
   text-align: center;
@@ -771,7 +772,6 @@ a {
     font-weight: 500;
   }
 
-}
 
 .overlay {
   position: fixed;
@@ -894,4 +894,5 @@ a {
 .contact-container {
   flex-direction: column;
   align-items: center;
+}
 }
