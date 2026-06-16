@@ -518,13 +518,12 @@ a {
 .project-card {
   width: 100%;
   min-height: 450px;
-
   display: flex;
   flex-direction: column;
-
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
