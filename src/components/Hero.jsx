@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import resume from "../assets/resume/Resume.jpg";
+import resume from "../assets/resume/resume.pdf";
 import profile from "../assets/images/Profile_Picture.png";
 
 function Hero() {
