@@ -204,6 +204,9 @@ a {
 .dark-mode .navbar {
   background: #2563EB;
 }
+.dark-mode .nav-links a{
+  color: white;
+}
 
 
 .dark-mode .logo,
